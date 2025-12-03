@@ -1,0 +1,6 @@
+Modelファイル名	説明
+Post.php	postsテーブル操作用モデル（likes・commentsとのリレーション定義）
+Like.php	likesテーブル操作用モデル（Postとのリレーション定義）
+Comment.php	commentsテーブル操作用モデル（Postとのリレーション定義）
+User.php	usersテーブル操作用モデル（Laravelデフォルト・本アプリでは未使用）
+

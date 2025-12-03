@@ -1,0 +1,13 @@
+ファイル名	フォーム部品	ルール	補足
+login.vue	メールアドレス	入力必須	ユーザー認証（Firebase Authentication）
+login.vue	パスワード	入力必須	ユーザー認証（Firebase Authentication）
+register.vue	ユーザーネーム	入力必須、20文字以下	JavaScriptバリデーション
+register.vue	メールアドレス	入力必須、メール形式	JavaScriptバリデーション
+register.vue	パスワード	入力必須、6文字以上	JavaScriptバリデーション
+Sidebar.vue	投稿内容	入力必須、120文字以内	HTML maxlength属性 + JavaScriptバリデーション
+comments.vue	コメント内容	入力必須、120文字以内	HTML maxlength属性 + JavaScriptバリデーション
+StorePostRequest.php	content	必須、文字列、最大120文字	Laravelバリデーション（バックエンド）
+StorePostRequest.php	user_name	必須、文字列、最大20文字	Laravelバリデーション（バックエンド）
+StoreCommentRequest.php	content	必須、文字列、最大120文字	Laravelバリデーション（バックエンド）
+StoreCommentRequest.php	user_name	必須、文字列、最大20文字	Laravelバリデーション（バックエンド）
+

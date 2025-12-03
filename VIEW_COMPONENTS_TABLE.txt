@@ -1,0 +1,25 @@
+Pagesファイル名	説明	
+pages/index.vue	投稿一覧（タイムライン）画面	
+pages/login.vue	ログイン画面	
+pages/register.vue	新規登録画面	
+pages/posts/[id]/comments.vue	コメント一覧・投稿画面	
+				
+				
+				
+
+Componentファイル名	説明	使用ページ
+components/Sidebar.vue	サイドバーコンポーネント（ナビゲーション・投稿フォーム）	pages/index.vue, pages/posts/[id]/comments.vue
+components/PostCard.vue	投稿カードコンポーネント（投稿表示・いいね・削除）	pages/index.vue
+components/CommentCard.vue	コメントカードコンポーネント（コメント表示）	pages/posts/[id]/comments.vue
+				
+				
+				
+
+パス	名前	コンポーネント(view)
+/	index	pages/index.vue
+/login	login	pages/login.vue
+/register	register	pages/register.vue
+/posts/[id]/comments	comments	pages/posts/[id]/comments.vue
+				
+				
+

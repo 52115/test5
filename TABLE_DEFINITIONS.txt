@@ -1,0 +1,67 @@
+usersテーブル					
+
+カラム名	型	PRIMARY KEY	UNIQUE KEY	NOT NULL	FOREIGN KEY
+id	unsigned bigint	◯		◯	
+name	varchar(255)			◯	
+email	varchar(255)		◯	◯	
+email_verified_at	timestamp				
+password	varchar(255)			◯	
+remember_token	varchar(100)			◯	
+created_at	timestamp			◯	
+updated_at	timestamp			◯	
+						
+
+						
+
+						
+
+postsテーブル					
+
+カラム名	型	PRIMARY KEY	UNIQUE KEY	NOT NULL	FOREIGN KEY
+id	unsigned bigint	◯		◯	
+user_id	varchar(255)			◯	
+user_name	varchar(255)			◯	
+content	varchar(120)			◯	
+created_at	timestamp			◯	
+updated_at	timestamp			◯	
+						
+
+						
+
+						
+
+						
+
+likesテーブル					
+
+カラム名	型	PRIMARY KEY	UNIQUE KEY	NOT NULL	FOREIGN KEY
+id	unsigned bigint	◯		◯	
+post_id	unsigned bigint			◯	posts(id) ON DELETE CASCADE
+user_id	varchar(255)			◯	
+created_at	timestamp			◯	
+updated_at	timestamp			◯	
+post_id_user_id	(post_id, user_id)		◯	複合UNIQUE KEY
+						
+
+						
+
+						
+
+						
+
+commentsテーブル					
+
+カラム名	型	PRIMARY KEY	UNIQUE KEY	NOT NULL	FOREIGN KEY
+id	unsigned bigint	◯		◯	
+post_id	unsigned bigint			◯	posts(id) ON DELETE CASCADE
+user_id	varchar(255)			◯	
+user_name	varchar(255)			◯	
+content	varchar(120)			◯	
+created_at	timestamp			◯	
+updated_at	timestamp			◯	
+						
+
+						
+
+						
+

@@ -1,0 +1,8 @@
+パス,メソッド,コントローラーファイル名,アクション,認証必須,説明,リクエストボディ,クエリパラメータ,パスパラメータ
+/api/posts,GET,PostController.php,index,要,投稿一覧を取得（いいね数・コメント数・いいね状態を含む）,,user_id,-
+/api/posts,POST,PostController.php,store,要,新しい投稿を作成,"{""user_id"": ""string"", ""user_name"": ""string"", ""content"": ""string(最大120文字)""}",-,-
+/api/posts/{id},DELETE,PostController.php,destroy,要,投稿を削除（投稿者のみ）,,user_id,id
+/api/posts/{id}/like,POST,PostController.php,like,要,いいねの追加/削除（トグル）,"{""user_id"": ""string""}",-,id
+/api/posts/{postId}/comments,GET,CommentController.php,index,不要,指定された投稿のコメント一覧を取得,,-,postId
+/api/posts/{postId}/comments,POST,CommentController.php,store,要,新しいコメントを作成,"{""user_id"": ""string"", ""user_name"": ""string"", ""content"": ""string(最大120文字)""}",-,postId
+
